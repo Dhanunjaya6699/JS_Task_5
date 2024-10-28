@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_5</title>
+</head>
+
+<body>
+    <h1>string methods</h1>
+    <img style="border:2px solid blue" src="./5th 01.PNG" alt="" width="80%"><br>
+    <img style="border:2px solid blue" src="./5th 02.PNG" alt="" width="80%"><br>
+    <img style="border:2px solid blue" src="./5th 03.PNG" alt="" width="80%"><br>
+    <img style="border:2px solid blue" src="./5th 04.PNG" alt="" width="80%"><br>
+    <img style="border:2px solid blue" src="./5th 05.PNG" alt="" width="80%"><br>
+    <img style="border:2px solid blue" src="./5th 06.PNG" alt="" width="80%"><br>
+
+    <script>
+
+        console.log("string methods :");
+        console.log("includes method :");
+
+        console.log("example1 : ")
+        let firstName = "Dhanunjaya"
+        let lastName1 = "Belaganti"
+        console.log(firstName);
+        console.log(lastName1);
+        console.log(firstName.includes(lastName1), "This method is used to check the, given substring is existed or not")
+        console.log("");
+
+        console.log("example2 : ");
+        let string1 = "sample string";
+        let string2 = "sample";
+        console.log(string1);
+        console.log(string2);
+        console.log(string1.includes(string2), "This method is used to check the, given substring is existed or not")
+        console.log("");
+
+        console.log("slice method : ");
+        console.log("example 1 :");
+        let name = "Belaganti Dhanunjaya";
+        console.log(name);
+        console.log(name.slice(1,), `Displays the indexes from ${(1)} till last index`);
+        console.log(name.slice(0, 9), `Displays the indexes from ${(0, 9)} till index 9`);
+        console.log(name.slice(-1, 2), `here it doesnt print anything because, combination of negative and positive indexes cant works. It doesnt looks back from index -1`);
+
+        console.log("");
+        console.log("example 2 :");
+        let sample = "This is Dhanu";
+        console.log(sample);
+        console.log(sample.slice(5), `this will print numbers from index 5 to till last index`);
+        console.log(sample.slice(-5, -1), `this will print index -5 to -1 index`);
+        console.log(sample.slice(-1, 2), `here it doesnt print anything because, combination of negative and positive indexes cant works. It doesnt looks back from index -1`);
+        console.log("");
+
+        console.log("join method :");
+        let nameTosplit = "dhanu$nja$ya_Bela$ga$nti_name";
+        console.log(nameTosplit);
+        console.log(nameTosplit.split("_"), `it splits the string wherever _ `);
+        console.log(nameTosplit.split("_").join(""), `by suing this join method it joins the strings`);
+        console.log(nameTosplit.split("$"), `based on the symbol $ it splits`);
+        console.log(nameTosplit.split("$").join("").split("_").join(""), `join the string with seperator`);
+        console.log(nameTosplit.split("$").join("").split("_").join(""));
+
+        console.log("");
+        console.log("split method : ");
+        console.log("");
+        let aa = "Dhanunja@ya Belaganti";
+        console.log(aa);
+        console.log(aa.split(''), `It splits all the charecters in the string`);
+        console.log(aa.split(" "), `its separates the strings with comma`);
+        console.log(aa.split("@"), "with the help of @ charecter it separates the string")
+        console.log("");
+
+
+        console.log("examples of slipt methos :");
+        console.log("example 1 :");
+        let sapmle1 = "Dhanunjaya Belaganti";
+        console.log(sapmle1)
+        console.log(sapmle1.split(""));
+        console.log(sapmle1.split(" ").join("_"), `=> with the help of the Undrscore _ it joins the string`);
+
+        console.log("");
+        console.log("example 2 :");
+        let sample2 = "Dhanunja#jaya";
+        console.log(sample2);
+        console.log(sample2.split("#"));
+        console.log(sample2.split("#").join(" "), `=> it splits the string with the #. And joins the string with " "(space)`);
+
+        console.log("");
+        console.log("example3 :");
+        let sample3 = "Dhanu@jaya@belaga@nti";
+        console.log(sample3);
+        console.log(sample3.split("@"))
+        console.log(sample3.split("@").join(" "), `=> it splits the string with the #. And joins the string with " "(space)`);
+
+        console.log("");
+        console.log("example4 :");
+        let sample4 = "@Dhanu_jaya ^ belag";
+        console.log(sample4);
+        let a = sample4.split("@")
+        console.log(a.join(" ").split("_").join(" ").split("^").join(""), `=> after this methods, this is the output`);
+
+        console.log("")
+        console.log("example 5 : ")
+        let sample5 = "Dhanu@Krishna_ganesh*sai";
+        console.log(sample5)
+        console.log(sample5.split("@").join(" ").split("_").join(" ").split("*").join(" "), `=> after this methods, this is the output`);
+
+        console.log("")
+        console.log("example6 : ");
+        let sample6 = "Dhanu@jaya"
+        console.log(sample6)
+        console.log(sample6.split("@").join('').split("a").join(""), `=> this is a updated string after split and join methods`);
+
+        console.log("");
+        console.log("example7 : ");
+        let sample7 = "this is Dhanu";
+        console.log(sample7);
+        console.log(sample7.split(""));
+        console.log(sample7.split(" "))
+        console.log(sample7.split(" ").join("_"), `=>this is updated string`)
+
+        console.log("");
+        console.log("example 8 :");
+        let sample8 = "Yes@this#is-a_sample8"
+        console.log(sample8);
+        console.log(sample8.split("@").join(" ").split("#").join(" ").split("-").join(" "), `=>this is a updated string after applying split and join methods`);
+
+        console.log("");
+        console.log("example 9 :");
+        let sample9 = "sample";
+        console.log(sample9);
+        console.log(sample9.split("#").join("x"), `=> this is updated string`);
+
+        console.log("");
+        console.log("example10 :");
+        let sample10 = "This_is@me&Dhanu";
+        console.log(sample10);
+        console.log(sample10.split("_").join(" ").split("@").join(" ").split("&").join(" "), `=> after applying these methods, this is the output`)
+
+    </script>
+</body>
+
+</html>
